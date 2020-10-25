@@ -1,0 +1,107 @@
+﻿@page "/AddAdult"
+@using Assignment2_3.Data
+@using Assignment2_3.Models
+@using System.Security
+@inject IAdultService AdultService;
+@inject NavigationManager NavigationManager
+@attribute [Authorize]
+
+
+<div class="text-left text-monospace font-weight-light ml-3">
+    <h3>Add Adult</h3>
+</div>
+<hr/>
+
+<div class="d-flex flex-column mt-5 mb-2">
+    <EditForm Model="@newAdult" OnValidSubmit="@AddNewAdult">
+        <DataAnnotationsValidator/>
+        <ValidationSummary/>
+        <div class="d-flex flex-row">
+            <div class="form-group mr-2">
+                *First Name: <br/>
+                <InputText @bind-Value="newAdult.FirstName"/>
+            </div>
+            <div class="form-group">
+                *Last Name: <br/>
+                <InputText @bind-Value="newAdult.LastName"/>
+            </div>
+        </div>
+        <div class="form-group">
+            Hair Colour: <br/>
+            <InputText @bind-Value="newAdult.HairColor"/>
+        </div>
+        <div class="form-group">
+            *Eye Colour: <br/>
+            <InputText @bind-Value="newAdult.EyeColor"/>
+        </div>
+        <div class="d-flex flex-row">
+            <div class="form-group mr-2">
+                *Age: <br/>
+                <InputNumber @bind-Value="newAdult.Age"/>
+            </div>
+            <div class="form-group mr-2">
+                *Weight: <br/>
+                <InputNumber @bind-Value="newAdult.Weight"/>
+            </div>
+            <div class="form-group mr-2">
+                *Height: <br/>
+                <InputNumber @bind-Value="newAdult.Height"/>
+            </div>
+        </div>
+        <div class="form-group">
+            Job: <br/>
+            <InputText list="jobs" @bind-Value="newAdult.JobTitle"/>
+            <datalist id="jobs">
+                <option>Unemployed</option>
+                <option>Teacher</option>
+                <option>Engineer</option>
+                <option>Garbage Collector</option>
+                <option>Shephard</option>
+                <option>Pilot</option>
+                <option>Air Traffic Controller</option>
+                <option>Police Officer</option>
+                <option>Fireman</option>
+                <option>Disappointment</option>
+                <option>Chef</option>
+                <option>Waiter</option>
+                <option>Doctor</option>
+                <option>Nurse</option>
+                <option>Factory Worker</option>
+            </datalist>
+        </div>
+        <div class="form-group">
+            *Sex <br/>
+            <InputSelect @bind-Value="newAdult.Sex">
+                <option></option>
+                <option>M</option>
+                <option>F</option>
+            </InputSelect>
+        </div>
+        <div class="mt-2">
+            <p class="actions">
+                <button class="btn btn-outline-success" type="submit">Create</button>
+            </p>
+        </div>
+    </EditForm>
+</div>
+
+<p class="text-info">
+    * Field must not be left blank
+</p>
+
+
+@code {
+    
+    private Adult newAdult = new Adult();
+    private async void AddNewAdult()
+    {
+    //adds a new adult type object to the file 
+    //defaults if nothing was selected in the form
+        if (newAdult.Sex == null)
+            newAdult.Sex = "M";
+        await AdultService.AddAdultAsync(newAdult);
+        NavigationManager.NavigateTo("/Adults");
+    }
+    
+    
+}

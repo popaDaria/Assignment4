@@ -1,0 +1,146 @@
+﻿@page "/Adults"
+@using Assignment2_3.Models
+@using Assignment2_3.Data
+@inject IAdultService AdultService
+@inject IFamilyService FamilyService
+
+
+<h3>Adults</h3>
+
+
+<p>
+    Filter by Age: <input type="number" @oninput="@((arg)=>Filter(arg))" style="width: 50px">
+</p>
+<p>
+    Filter by Gender: <input type="text" @oninput="@((arg)=>FilterByGender(arg))" style="width: 50px">
+</p>
+
+
+@if (allAdults == null)
+{
+    <p class="text-info font-weight-bold">
+        Loading...
+    </p>
+}
+else if (!allAdults.Any())
+{
+    <p>
+        <em>No Adult items exist. Please add some</em>
+    </p>
+}
+else
+{
+    <div class="d-flex">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Person ID</th>
+                <th>Full Name</th>
+                <th>Hair Colour</th>
+                <th>Eye Colour</th>
+                <th>Age</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Sex</th>
+                <th>Job</th>
+                <AuthorizeView Policy="MustBeAdmin">
+                    <th>Remove</th>
+                </AuthorizeView>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var items in adultsToShow)
+            {
+                <tr>
+                    <td class="font-weight-bold">@items.Id</td>
+                    <td>@items.FirstName @items.LastName</td>
+                    @if (@items.HairColor == null)
+                    {
+                        <td>unspecified</td>
+                    }
+                    else
+                    {
+                        <td>@items.HairColor</td>
+                    }
+                    <td>@items.EyeColor</td>
+                    <td>@items.Age</td>
+                    <td>@items.Weight</td>
+                    <td>@items.Height</td>
+                    <td>@items.Sex</td>
+                    <td>@items.JobTitle</td>
+                    <AuthorizeView Policy="MustBeAdmin">
+                        <td>
+                            <button @onclick="@(() => RemoveAdult(items))">
+                                <i class="oi oi-trash" style="color:darkred"/>
+                            </button>
+                        </td>
+                    </AuthorizeView>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+
+
+@code {
+    private IList<Adult> allAdults;
+    private IList<Adult> adultsToShow;
+
+    private int? filterByAge;
+    private string filterByGender;
+
+    protected override async Task OnInitializedAsync()
+    {
+        allAdults = await AdultService.GetAdultsAsync();
+        adultsToShow = allAdults;
+    }
+
+    private async void RemoveAdult(Adult adult)
+    {
+        await AdultService.RemoveAdultAsync(adult);
+        await FamilyService.RemoveAdultAsync(adult);
+        allAdults.Remove(adult);
+    }
+
+    private void Filter(ChangeEventArgs args)
+    {
+        filterByAge = null;
+        try
+        {
+            filterByAge = int.Parse(args.Value.ToString());
+        }
+        catch (Exception e)
+        {
+    //does nothing
+        }
+        if (filterByAge != null)
+        {
+            adultsToShow = allAdults.Where(t => t.Age == filterByAge).ToList();
+        }
+        else
+        {
+            adultsToShow = allAdults;
+        }
+    }
+
+    private void FilterByGender(ChangeEventArgs args)
+    {
+        filterByGender = args.Value.ToString();
+        if(filterByGender!=null || filterByGender!=""||args.Value!=null)
+            ExecuteFilter();
+        else
+        {
+            adultsToShow = allAdults;
+        }
+    }
+    
+    private void ExecuteFilter()
+    {
+        adultsToShow = allAdults.Where(t =>
+            (filterByAge != null && t.Age == filterByAge || filterByAge == null) &&
+            (filterByGender != null && t.Sex == filterByGender || filterByGender == null)
+            ).ToList();
+    }
+
+}

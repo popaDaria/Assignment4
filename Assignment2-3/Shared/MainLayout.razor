@@ -1,0 +1,52 @@
+﻿@using Assignment2_3.Authentication
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<div class="sidebar">
+    <NavMenu/>
+</div>
+
+<div class="main">
+    <div class="top-row px-4 mt-auto">
+        <AuthorizeView>
+            @*<NotAuthorized>
+                <button class="btn-outline-success" @onclick="GoToLogin">Go to Login</button>
+            </NotAuthorized>*@
+            <Authorized>
+                <button class="btn-danger" @onclick="PerformLogout">Log out</button>
+            </Authorized>
+        </AuthorizeView>
+    </div>
+    <div class="content px-4">
+        @Body
+    </div>
+</div>
+
+
+
+@code
+{
+    [CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        base.OnInitialized();
+        var user = (await AuthStat).User;
+        if (!user.Identity.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo($"/Login");
+        }
+    }
+
+    public async Task GoToLogin()
+    {
+        NavigationManager.NavigateTo("/Login");
+    }
+    public async Task PerformLogout() {
+        try {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        } catch (Exception e) { }
+    }
+}

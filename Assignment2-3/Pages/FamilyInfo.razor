@@ -1,0 +1,136 @@
+﻿@page "/FamilyInfo"
+@using Assignment2_3.Models
+@using Assignment2_3.Data
+@inject IFamilyService FamilyService
+@inject NavigationManager NavigationManager
+@using System.Net.Http
+@using System.Text
+@using System.Web
+@using Microsoft.AspNetCore.Html
+
+
+<div class="text-left text-monospace font-weight-light ml-3">
+    <h3>Family Info</h3>
+</div>
+<hr/>
+
+<div class="d-flex flex-column mt-5 mb-2">
+    <EditForm Model="@selectedFamily">
+        <DataAnnotationsValidator/>
+        <ValidationSummary/>
+        
+      
+        <InputSelect @bind-Value="selectedFamilyString">
+            <option></option>
+            @for (int i = 0; i < allFamilies.Count; i++)
+            {
+                <option>@i : @allFamilies.ElementAt(@i).Adults.ElementAt(0).FirstName @allFamilies.ElementAt(@i).Adults.ElementAt(0).LastName</option>
+            }
+        </InputSelect>
+        
+        <div class="mt-2">
+            <p class="actions">
+                <button class="btn btn-outline-success" type="button" @onclick=@(() => SelectFamily())>Select</button>
+            </p>
+        </div>
+    </EditForm>
+</div>
+
+<div class="d-flex @divClass">
+    <pre style="white-space: pre-wrap" class="FamilyInfo">
+        @Message
+    </pre>
+</div>
+
+
+@code {
+    private Family selectedFamily = new Family();
+    private string selectedFamilyString, divClass="";
+
+    private IList<Family> allFamilies = new List<Family>();
+    private string Message { get; set; } = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        allFamilies = await FamilyService.GetFamiliesAsync();
+    }
+
+    private void SelectFamily()
+    {
+        if (selectedFamilyString != null)
+        {
+            divClass = "FamilyInfoContainer";
+            string[] str = selectedFamilyString.Split(" ");
+            int id1 = Int32.Parse(str.ElementAt(0));
+            selectedFamily = allFamilies.ElementAt(id1);
+            Message = "\t The family address is: "+selectedFamily.StreetName+ ", Nr. "+selectedFamily.HouseNumber+ "\n" +"\t The family is composed of: \n";
+            if (selectedFamily.Adults.Count<2)
+            {
+                Message += "\t\t --- Adults: " + selectedFamily.Adults.ElementAt(0).FirstName + " " + selectedFamily.Adults.ElementAt(0).LastName + "\n";
+            }
+            else
+            {
+                Message += "\t\t --- Adults: " + selectedFamily.Adults.ElementAt(0).FirstName + " " + selectedFamily.Adults.ElementAt(0).LastName + 
+                           " and " + selectedFamily.Adults.ElementAt(1).FirstName+ " "+selectedFamily.Adults.ElementAt(1).LastName + "\n";
+            }
+            if (selectedFamily.Children.Count!=0)
+            {
+                Message += "\t\t --- Children: \n";
+                foreach (var child in selectedFamily.Children)
+                {
+                    Message += "\t\t\t\t - " + child.FirstName + " " + child.LastName + ", " + child.Sex + ", " + child.Age + " years old, " + child.Height + "cm tall, " + child.Weight + "kg, " +
+                               child.EyeColor + " eyes, " + child.HairColor + " hair. \n";
+                    IList<ChildInterest> interests = child.ChildInterests;
+                    if (interests != null)
+                    {
+                        Message += "\t\t\t\t\t Interests: ";
+                        foreach (var intr in interests)
+                        {
+                            Message += intr.InterestId + "; ";
+                        }
+                        Message += "\n";
+                    }
+                    else
+                    {
+                        Message += "\t\t\t\t\t They have no interests. :c \n";
+                    }
+                    IList<Pet> pets = child.Pets;
+                    if (pets.Count != 0)
+                    {
+                        Message += "\t\t\t\t\t Personal pets: \n";
+                        foreach (var pet in pets)
+                        {
+                            Message += "\t\t\t\t\t\t\t - " + pet.Name + ", " + pet.Species + ", " + pet.Age + " years old \n";
+                        }
+                    }
+                    else
+                    {
+                        Message += "\t\t\t\t\t They have no personal pets. \n";
+                    }
+                }
+            }
+            else
+            {
+                Message += "\t\t --- No Children. \n";
+            }
+            if (selectedFamily.Pets.Count != 0)
+            {
+                Message += "\t\t --- Family pets: \n";
+                foreach (var pet in selectedFamily.Pets)
+                {
+                    Message += "\t\t\t\t - " + pet.Name + ", " + pet.Species + ", " + pet.Age + " years old \n";
+                }
+            }
+            else
+            {
+                Message += "\t\t --- No Family Pets. \n";
+            }
+        }
+        else
+        {
+            divClass = "";
+            selectedFamily = null;
+            Message = "";
+        }
+    }
+}

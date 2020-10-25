@@ -1,0 +1,108 @@
+﻿@page "/Families"
+@using Assignment2_3.Models
+@using Assignment2_3.Data
+@inject IFamilyService FamilyService
+@inject NavigationManager NavigationManager
+
+
+
+<h3>Families</h3>
+<button @onclick="@infoButton_Click" class="btn-outline-success">More information</button>
+<br/>
+
+@if (allFamilies == null)
+{
+    <p class="text-info font-weight-bold">
+        Loading...
+    </p>
+}
+else if (!allFamilies.Any())
+{
+    <p>
+        <em>No Family items exist. Please add some</em>
+    </p>
+}
+else
+{
+    <div class="d-flex">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Street Name</th>
+                <th>House nr.</th>
+                <th colspan="2" style="text-align: center">Adults</th>
+                <th>Nr. of children</th>
+                <th>Nr. of pets</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var items in allFamilies)
+            {
+                <tr>
+                    <td>@items.StreetName</td>
+                    <td>@items.HouseNumber</td>
+                    
+                
+                    @if (@items.Adults.Count>=1)
+                    {
+                        <td>
+                            @items.Adults.ElementAt(0).FirstName @items.Adults.ElementAt(0).LastName
+                        </td>
+                    }
+                    else
+                    {
+                        <td> - </td>
+                    }
+                    
+                    
+                    @if (@items.Adults.Count==2)
+                    {
+                        <td>
+                            @items.Adults.ElementAt(1).FirstName @items.Adults.ElementAt(1).LastName
+                        </td>
+                    }
+                    else
+                    {
+                        <td> - </td> 
+                    }
+                    
+                    @if (@items.Children != null)
+                    {
+                        <td> @items.Children.Count </td>
+                    }
+                    else
+                    {
+                        <td> 0 </td>
+                    }
+                    
+                    @if (@items.Pets != null)
+                    {
+                        <td> @items.Pets.Count </td>
+                    }
+                    else
+                    {
+                        <td> 0 </td>
+                    }
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+
+
+@code {
+    private IList<Family> allFamilies;
+    
+
+    protected override async Task OnInitializedAsync()
+    {
+        allFamilies = await FamilyService.GetFamiliesAsync();
+    }
+
+    private void infoButton_Click(MouseEventArgs e)
+    {
+        NavigationManager.NavigateTo("/FamilyInfo");
+    }
+}
