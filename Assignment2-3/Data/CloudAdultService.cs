@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -21,7 +22,9 @@ namespace Assignment2_3.Data
 
         public async Task AddAdultAsync(Adult newAdult)
         {
-            newAdult.Id = GetAdultsAsync().Result.ElementAt(GetAdultsAsync().Result.Count - 1).Id + 1;
+            IList<Adult> adults = await GetAdultsAsync();
+            newAdult.Id = adults.ElementAt(adults.Count - 1).Id + 1;
+            
             HttpClient client = new HttpClient();
             string adultSerialized = JsonSerializer.Serialize(newAdult);
             StringContent content = new StringContent(
@@ -29,8 +32,9 @@ namespace Assignment2_3.Data
                 Encoding.UTF8,
                 "application/json"
             );
+
             HttpResponseMessage responseMessage =
-                await client.PostAsync("http://dnp.metamate.me/Adults", content);
+                await client.PutAsync("http://dnp.metamate.me/Adults", content);
             Console.WriteLine(responseMessage.StatusCode);  
         }
 

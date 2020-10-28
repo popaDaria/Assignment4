@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -21,18 +22,31 @@ namespace Assignment2_3.Data
 
         public async Task AddFamilyAsync(Family newFamily)
         {
-            newFamily.Id = GetFamiliesAsync().Result.ElementAt(GetFamiliesAsync().Result.Count - 1).Id + 1;
-            if (IsAdressUnique(newFamily))
+            IList<Family> families = await GetFamiliesAsync();
+            newFamily.Id = families.ElementAt(families.Count - 1).Id + 1;
+            Console.WriteLine("FAMILY ID: "+ newFamily.Id);
+
+            
+            //USING PREMADE ADULTS DOES NOT WORK FOR SOME REASON :/
+            foreach (var adult in newFamily.Adults)
+            {
+                adult.Id+=7000;
+            }
+            
+            bool isUnique = await IsAdressUnique(newFamily);
+            if (isUnique)
             {
                 HttpClient client = new HttpClient();
                 string familySerialize = JsonSerializer.Serialize(newFamily);
+                Console.WriteLine(familySerialize);
+                
                 StringContent content = new StringContent(
                     familySerialize,
                     Encoding.UTF8,
                     "application/json"
                 );
                 HttpResponseMessage responseMessage =
-                    await client.PostAsync("http://dnp.metamate.me/Families", content);
+                    await client.PutAsync("http://dnp.metamate.me/Families", content);
                 Console.WriteLine(responseMessage.StatusCode);
             }
         }
@@ -40,22 +54,27 @@ namespace Assignment2_3.Data
         public async Task<IList<int>> AdultsInFamiliesAsync()
         {
             IList<int> adults = new List<int>();
-            foreach (var family in GetFamiliesAsync().Result)
+            IList<Family> families = await GetFamiliesAsync();
+            foreach (var family in families)
             {
                 foreach (var adult in family.Adults)
                 {
                     adults.Add(adult.Id);
+                    //REMOVE THIS WHEN MAKING YOUR OWN LIST
+                    if(adult.Id>7000)
+                        adults.Add(adult.Id - 7000);
                 }
             }
-
             return adults;
         }
     
 
         public async Task RemoveAdultAsync(Adult adult)
         {
+            
             Family familyToRemove = null;
-            foreach (var family in GetFamiliesAsync().Result)
+            IList<Family> families = await GetFamiliesAsync();
+            foreach (var family in families)
             {
                 if (family.Adults.Contains(adult))
                 {
@@ -72,14 +91,15 @@ namespace Assignment2_3.Data
                 familyToRemove.Adults.Remove(adult);
                 if (familyToRemove.Adults.Count != 0)
                 {
-                    AddFamilyAsync(familyToRemove);
+                    await AddFamilyAsync(familyToRemove);
                 }
             }
+            
         }
         
-        private bool IsAdressUnique(Family newFamily)
+        private async Task<bool> IsAdressUnique(Family newFamily)
         {
-            IList<Family> families = GetFamiliesAsync().Result;
+            IList<Family> families = await GetFamiliesAsync();
             bool unique = true;
             foreach (Family fam in families)
             {

@@ -2,10 +2,13 @@ using System.Text.Json.Serialization;
 
 namespace Assignment2_3.Models {
 public class ChildInterest {
+    
+    [JsonPropertyName("childId")]
     public int ChildId { get; set; }
     [JsonIgnore]
     public Child Child { get; set; }
     
+    [JsonPropertyName("interestId")]
     public string InterestId { get; set; }
     [JsonIgnore]
     public Interest Interest { get; set; }
