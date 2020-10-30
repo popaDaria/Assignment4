@@ -15,7 +15,7 @@ namespace Assignment2_3.Data
         public async Task<IList<Adult>> GetAdultsAsync()
         {
             HttpClient client = new HttpClient();
-            string message = await client.GetStringAsync("http://dnp.metamate.me/Adults");
+            string message = await client.GetStringAsync("https://localhost:5006/Adults");
             List<Adult> result = JsonSerializer.Deserialize<List<Adult>>(message);
             return result;
         }
@@ -23,7 +23,8 @@ namespace Assignment2_3.Data
         public async Task AddAdultAsync(Adult newAdult)
         {
             IList<Adult> adults = await GetAdultsAsync();
-            newAdult.Id = adults.ElementAt(adults.Count - 1).Id + 1;
+            int max = adults.Max(adult => adult.Id);
+            newAdult.Id = (++max);
             
             HttpClient client = new HttpClient();
             string adultSerialized = JsonSerializer.Serialize(newAdult);
@@ -34,7 +35,7 @@ namespace Assignment2_3.Data
             );
 
             HttpResponseMessage responseMessage =
-                await client.PutAsync("http://dnp.metamate.me/Adults", content);
+                await client.PutAsync("https://localhost:5006/Adults", content);
             Console.WriteLine(responseMessage.StatusCode);  
         }
 
@@ -48,14 +49,14 @@ namespace Assignment2_3.Data
                 "application/json"
             );
             HttpResponseMessage responseMessage =
-                await client.PatchAsync("http://dnp.metamate.me/Adults/"+newAdult.Id, content);
+                await client.PatchAsync("https://localhost:5006/Adults", content);
             Console.WriteLine(responseMessage.StatusCode);
         }
 
         public async Task RemoveAdultAsync(Adult adult)
         {
             HttpClient client = new HttpClient();
-            var message = await client.DeleteAsync("http://dnp.metamate.me/Adults/"+adult.Id);
+            var message = await client.DeleteAsync("https://localhost:5006/Adults/"+adult.Id);
             Console.WriteLine(message.StatusCode);
         }
     }

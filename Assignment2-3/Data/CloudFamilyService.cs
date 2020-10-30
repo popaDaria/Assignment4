@@ -15,7 +15,7 @@ namespace Assignment2_3.Data
         public async Task<IList<Family>> GetFamiliesAsync()
         {
             HttpClient client = new HttpClient();
-            string message = await client.GetStringAsync("http://dnp.metamate.me/Families");
+            string message = await client.GetStringAsync("https://localhost:5006/Families");
             List<Family> result = JsonSerializer.Deserialize<List<Family>>(message);
             return result;
         }
@@ -23,16 +23,14 @@ namespace Assignment2_3.Data
         public async Task AddFamilyAsync(Family newFamily)
         {
             IList<Family> families = await GetFamiliesAsync();
-            newFamily.Id = families.ElementAt(families.Count - 1).Id + 1;
-            Console.WriteLine("FAMILY ID: "+ newFamily.Id);
+            int max = families.Max(family => family.Id);
+            newFamily.Id = (++max);
 
-            
-            //USING PREMADE ADULTS DOES NOT WORK FOR SOME REASON :/
+            /*//USING PREMADE ADULTS DOES NOT WORK FOR SOME REASON :/
             foreach (var adult in newFamily.Adults)
             {
                 adult.Id+=7000;
-            }
-            
+            }*/
             bool isUnique = await IsAdressUnique(newFamily);
             if (isUnique)
             {
@@ -46,7 +44,7 @@ namespace Assignment2_3.Data
                     "application/json"
                 );
                 HttpResponseMessage responseMessage =
-                    await client.PutAsync("http://dnp.metamate.me/Families", content);
+                    await client.PutAsync("https://localhost:5006/Families", content);
                 Console.WriteLine(responseMessage.StatusCode);
             }
         }
@@ -61,8 +59,8 @@ namespace Assignment2_3.Data
                 {
                     adults.Add(adult.Id);
                     //REMOVE THIS WHEN MAKING YOUR OWN LIST
-                    if(adult.Id>7000)
-                        adults.Add(adult.Id - 7000);
+                    /*if(adult.Id>7000)
+                        adults.Add(adult.Id - 7000);*/
                 }
             }
             return adults;
@@ -85,7 +83,8 @@ namespace Assignment2_3.Data
             if (familyToRemove != null)
             {
                 HttpClient client = new HttpClient();
-                var message = await client.DeleteAsync("http://dnp.metamate.me/Families?streetname="+familyToRemove.StreetName+"&housenumber="+familyToRemove.HouseNumber);
+                var message = await client.DeleteAsync("https://localhost:5006/Families?adultId="+adult.Id);
+                
                 Console.WriteLine(message.StatusCode);
                 
                 familyToRemove.Adults.Remove(adult);
