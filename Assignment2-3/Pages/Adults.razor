@@ -3,6 +3,7 @@
 @using Assignment2_3.Data
 @inject IAdultService AdultService
 @inject IFamilyService FamilyService
+@inject NavigationManager NavigationManager
 
 
 <h3>Adults</h3>
@@ -101,6 +102,7 @@ else
         await AdultService.RemoveAdultAsync(adult);
         await FamilyService.RemoveAdultAsync(adult);
         allAdults.Remove(adult);
+        NavigationManager.NavigateTo("/Login");
     }
 
     private void Filter(ChangeEventArgs args)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -37,17 +38,18 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider {
         return await Task.FromResult(new AuthenticationState(cachedClaimsPrincipal));
     }
 
-    public void ValidateLogin(string username, string password) {
+    public async Task ValidateLogin(string username, string password) {
         Console.WriteLine("Validating log in");
-        if (string.IsNullOrEmpty(username)) throw new Exception("Enter username");
+        if (string.IsNullOrEmpty(username))throw new Exception("Enter username");
         if (string.IsNullOrEmpty(password)) throw new Exception("Enter password");
 
         ClaimsIdentity identity = new ClaimsIdentity();
         try {
-            User user = userService.ValidateUser(username, password);
+            User user = await userService.ValidateUser(username, password);
+            Console.WriteLine(user.UserName);
             identity = SetupClaimsForUser(user);
-            string serialisedData = JsonSerializer.Serialize(user);
-            jsRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", serialisedData);
+            string serialisedData = JsonSerializer.Serialize(user); 
+            await jsRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", serialisedData);
             cachedUser = user;
         } catch (Exception e) {
             throw e;

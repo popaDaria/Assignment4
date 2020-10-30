@@ -1,78 +1,5 @@
 [
   {
-    "StreetName": "Pine Street",
-    "HouseNumber": 1,
-    "Adults": [
-      {
-        "JobTitle": "Singer",
-        "Id": 2,
-        "FirstName": "Ahana",
-        "LastName": "Bernard",
-        "HairColor": "Brown",
-        "EyeColor": "Brown",
-        "Age": 34,
-        "Weight": 56.6,
-        "Height": 134,
-        "Sex": "F"
-      }
-    ],
-    "Children": [
-      {
-        "ChildInterests": [
-          {
-            "ChildId": 2,
-            "InterestId": "Bowling"
-          },
-          {
-            "ChildId": 2,
-            "InterestId": "Ultimate"
-          },
-          {
-            "ChildId": 2,
-            "InterestId": "Racing Cars"
-          },
-          {
-            "ChildId": 2,
-            "InterestId": "Kite Flying"
-          }
-        ],
-        "Pets": [],
-        "Id": 2,
-        "FirstName": "Eduardo",
-        "LastName": "Bernard",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 6,
-        "Weight": 41.6,
-        "Height": 94,
-        "Sex": "M"
-      },
-      {
-        "ChildInterests": [
-          {
-            "ChildId": 3,
-            "InterestId": "Racing Cars"
-          },
-          {
-            "ChildId": 3,
-            "InterestId": "Kite Flying"
-          }
-        ],
-        "Pets": [],
-        "Id": 3,
-        "FirstName": "Nyjah",
-        "LastName": "Bernard",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 1,
-        "Weight": 23.6,
-        "Height": 64,
-        "Sex": "M"
-      }
-    ],
-    "Pets": []
-  },
-  {
     "StreetName": "Theater Street",
     "HouseNumber": 1,
     "Adults": [
@@ -228,83 +155,6 @@
         "Age": 6,
         "Weight": 22.439999,
         "Height": 122,
-        "Sex": "F"
-      }
-    ],
-    "Pets": []
-  },
-  {
-    "StreetName": "Princess Avenue",
-    "HouseNumber": 1,
-    "Adults": [
-      {
-        "JobTitle": "Credit Analyst",
-        "Id": 7,
-        "FirstName": "Luca",
-        "LastName": "Matthews",
-        "HairColor": "Black",
-        "EyeColor": "Hazel",
-        "Age": 59,
-        "Weight": 62.2,
-        "Height": 168,
-        "Sex": "F"
-      }
-    ],
-    "Children": [
-      {
-        "ChildInterests": [
-          {
-            "ChildId": 8,
-            "InterestId": "Soccer"
-          },
-          {
-            "ChildId": 8,
-            "InterestId": "Racing Cars"
-          },
-          {
-            "ChildId": 8,
-            "InterestId": "Softball"
-          }
-        ],
-        "Pets": [],
-        "Id": 8,
-        "FirstName": "Aydin",
-        "LastName": "Matthews",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 7,
-        "Weight": 31,
-        "Height": 140,
-        "Sex": "M"
-      },
-      {
-        "ChildInterests": [
-          {
-            "ChildId": 9,
-            "InterestId": "Paper Plane Flying"
-          },
-          {
-            "ChildId": 9,
-            "InterestId": "Fishing"
-          },
-          {
-            "ChildId": 9,
-            "InterestId": "Dancing"
-          },
-          {
-            "ChildId": 9,
-            "InterestId": "Racing Cars"
-          }
-        ],
-        "Pets": [],
-        "Id": 9,
-        "FirstName": "Angel",
-        "LastName": "Matthews",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 19,
-        "Weight": 89.42,
-        "Height": 160,
         "Sex": "F"
       }
     ],
@@ -1322,18 +1172,6 @@
         "Weight": 79.2,
         "Height": 153,
         "Sex": "F"
-      },
-      {
-        "JobTitle": "Civil Engineer",
-        "Id": 28,
-        "FirstName": "Yisroel",
-        "LastName": "Mooney",
-        "HairColor": "Black",
-        "EyeColor": "Brown",
-        "Age": 44,
-        "Weight": 62.2,
-        "Height": 173,
-        "Sex": "M"
       }
     ],
     "Children": [

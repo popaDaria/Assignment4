@@ -60,18 +60,6 @@
     "Sex": "M"
   },
   {
-    "JobTitle": "Electrical Engineer",
-    "Id": 5,
-    "FirstName": "Colt",
-    "LastName": "Lewis",
-    "HairColor": "Black",
-    "EyeColor": "Grey",
-    "Age": 42,
-    "Weight": 76.6,
-    "Height": 179,
-    "Sex": "M"
-  },
-  {
     "JobTitle": "Front Desk Coordinator",
     "Id": 6,
     "FirstName": "Zaynab",

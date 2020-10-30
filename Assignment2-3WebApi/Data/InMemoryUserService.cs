@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Assignment2_3.Models;
+using Assignment2_3WebApi.Models;
 
-namespace Assignment2_3.Data
+namespace Assignment2_3WebApi.Data
 {
     public class InMemoryUserService : IUserService
     {
@@ -39,17 +39,16 @@ namespace Assignment2_3.Data
             }.ToList();
 
         }
-        public async Task<User> ValidateUser(string userName, string password)
+        public async Task<User> ValidateUser(string userName)
         {
             User first = users.FirstOrDefault(user => user.UserName.Equals(userName));
-            if (first == null) {
+            /*if (first == null) {
                 throw new Exception("User not found");
             }
 
             if (!first.Password.Equals(password)) {
                 throw new Exception("Incorrect password");
-            }
-
+            }*/
             return first;
         }
     }

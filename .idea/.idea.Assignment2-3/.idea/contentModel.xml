@@ -19,6 +19,7 @@
           <e p="AdultService.cs" t="Include" />
           <e p="CloudAdultService.cs" t="Include" />
           <e p="CloudFamilyService.cs" t="Include" />
+          <e p="CloudUserService.cs" t="Include" />
           <e p="FamilyService.cs" t="Include" />
           <e p="IAdultService.cs" t="Include" />
           <e p="IFamilyService.cs" t="Include" />
@@ -105,12 +106,15 @@
         <e p="Controllers" t="Include">
           <e p="AdultsController.cs" t="Include" />
           <e p="FamiliesController.cs" t="Include" />
+          <e p="UsersController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="AdultService.cs" t="Include" />
           <e p="FamilyService.cs" t="Include" />
           <e p="IAdultService.cs" t="Include" />
           <e p="IFamilyService.cs" t="Include" />
+          <e p="InMemoryUserService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
         </e>
         <e p="families.json" t="Include" />
         <e p="Models" t="Include">

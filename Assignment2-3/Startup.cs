@@ -32,7 +32,7 @@ namespace Assignment2_3
             services.AddServerSideBlazor();
             services.AddSingleton<IAdultService,CloudAdultService>();
             services.AddSingleton<IFamilyService,CloudFamilyService>();
-            services.AddScoped<IUserService, InMemoryUserService>();
+            services.AddScoped<IUserService, CloudUserService>();
             services.AddScoped<AuthenticationStateProvider,CustomAuthenticationStateProvider>();
 
             services.AddAuthorization(options =>
