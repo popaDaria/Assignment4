@@ -50,7 +50,6 @@
           <e p="AddAdult.razor" t="Include" />
           <e p="AddFamily.razor" t="Include" />
           <e p="Adults.razor" t="Include" />
-          <e p="Error.cshtml" t="Include" />
           <e p="Families.razor" t="Include" />
           <e p="FamilyInfo.razor" t="Include" />
           <e p="Login.razor" t="Include" />
@@ -65,7 +64,6 @@
         <e p="Shared" t="Include">
           <e p="MainLayout.razor" t="Include" />
           <e p="NavMenu.razor" t="Include" />
-          <e p="SurveyPrompt.razor" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="wwwroot" t="Include">
