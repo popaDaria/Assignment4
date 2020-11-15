@@ -29,7 +29,7 @@ namespace Assignment2_3WebApi
             services.AddControllers();
             services.AddSingleton<IAdultService,AdultService>();
             services.AddSingleton<IFamilyService,FamilyService>();
-            services.AddScoped<IUserService, InMemoryUserService>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,6 +3,8 @@
   <component name="ContentModelStore">
     <e p="C:\Users\Tania Maria\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Tania Maria\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\rider\v202\SolutionCaches\_Assignment2-3.-858159444.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Tania Maria\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Tania Maria\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
     <e p="D:\rider\Assignment2-3" t="IncludeFlat">
       <e p="Assignment2-3" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
@@ -100,6 +102,9 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="Assignment2-3WebApi.csproj" t="IncludeRecursive" />
+        <e p="Assignment4.db" t="Include" />
+        <e p="Assignment4.db-shm" t="Include" />
+        <e p="Assignment4.db-wal" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="AdultsController.cs" t="Include" />
@@ -113,8 +118,17 @@
           <e p="IFamilyService.cs" t="Include" />
           <e p="InMemoryUserService.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
+          <e p="UserService.cs" t="Include" />
+        </e>
+        <e p="DataAccess" t="Include">
+          <e p="Assignment4DBContext.cs" t="Include" />
         </e>
         <e p="families.json" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20201114142818_InitialCreate.cs" t="Include" />
+          <e p="20201114142818_InitialCreate.Designer.cs" t="Include" />
+          <e p="Assignment4DBContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="Adult.cs" t="Include" />
           <e p="Child.cs" t="Include" />
@@ -140,6 +154,7 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="users.json" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>

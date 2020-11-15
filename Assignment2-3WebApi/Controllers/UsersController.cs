@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Assignment2_3WebApi.Data;
 using Assignment2_3WebApi.Models;
@@ -17,6 +19,21 @@ namespace Assignment2_3WebApi.Controllers
             this.userService = userService;
         }
 
+        /*[HttpGet]
+        public async Task<ActionResult<IList<Family>>> GetAllUsers()
+        {
+            try
+            {
+                IList<User> users = await userService.GetUsers();
+                return Ok(users);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }*/
+        
+        
         [HttpGet]
         public async Task<ActionResult<User>> GetUser([FromQuery] string userName)
         {

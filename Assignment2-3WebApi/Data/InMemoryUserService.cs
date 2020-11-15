@@ -51,5 +51,10 @@ namespace Assignment2_3WebApi.Data
             }*/
             return first;
         }
+
+        public async Task<IList<User>> GetUsers()
+        {
+            return users;
+        }
     }
 }

@@ -27,7 +27,6 @@ D:\rider\Assignment2-3\Assignment2-3\obj\Debug\netcoreapp3.1\Razor\App.razor.g.c
 D:\rider\Assignment2-3\Assignment2-3\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs
 D:\rider\Assignment2-3\Assignment2-3\obj\Debug\netcoreapp3.1\Razor\Shared\NavMenu.razor.g.cs
 D:\rider\Assignment2-3\Assignment2-3\obj\Debug\netcoreapp3.1\Razor\_Imports.razor.g.cs
-D:\rider\Assignment2-3\Assignment2-3\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 D:\rider\Assignment2-3\Assignment2-3\obj\Debug\netcoreapp3.1\Razor\Pages\_Host.cshtml.g.cs
 D:\rider\Assignment2-3\Assignment2-3\obj\Debug\netcoreapp3.1\Assignment2-3.RazorAssemblyInfo.cache
 D:\rider\Assignment2-3\Assignment2-3\obj\Debug\netcoreapp3.1\Assignment2-3.RazorAssemblyInfo.cs

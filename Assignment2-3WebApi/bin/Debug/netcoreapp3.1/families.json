@@ -301,14 +301,7 @@
         "Sex": "F"
       }
     ],
-    "Pets": [
-      {
-        "Id": 1,
-        "Species": "Cat",
-        "Name": "Muffin",
-        "Age": 0
-      }
-    ]
+    "Pets": []
   },
   {
     "StreetName": "Forest Street",
@@ -362,7 +355,14 @@
         "Sex": "F"
       }
     ],
-    "Pets": []
+    "Pets": [
+      {
+        "Id": 1,
+        "Species": "Cat",
+        "Name": "Tobie",
+        "Age": 11
+      }
+    ]
   },
   {
     "StreetName": "Francis IIStreet",
@@ -2208,7 +2208,7 @@
       },
       {
         "JobTitle": "Student",
-        "Id": 42,
+        "Id": 43,
         "FirstName": "Daria",
         "LastName": "Popa",
         "HairColor": "Red",
@@ -2257,7 +2257,7 @@
         ],
         "Pets": [
           {
-            "Id": 0,
+            "Id": 18,
             "Species": "Lizard",
             "Name": "Gomez",
             "Age": 1
