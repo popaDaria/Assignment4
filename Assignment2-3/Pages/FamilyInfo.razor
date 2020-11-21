@@ -24,7 +24,7 @@
             <option></option>
             @for (int i = 0; i < allFamilies.Count; i++)
             {
-                <option>@i : @allFamilies.ElementAt(@i).Adults.ElementAt(0).FirstName @allFamilies.ElementAt(@i).Adults.ElementAt(0).LastName</option>
+                <option>@i : Family living at @allFamilies.ElementAt(@i).HouseNumber @allFamilies.ElementAt(@i).StreetName</option>
             }
         </InputSelect>
         
@@ -64,7 +64,11 @@
             int id1 = Int32.Parse(str.ElementAt(0));
             selectedFamily = allFamilies.ElementAt(id1);
             Message = "\t The family address is: "+selectedFamily.StreetName+ ", Nr. "+selectedFamily.HouseNumber+ "\n" +"\t The family is composed of: \n";
-            if (selectedFamily.Adults.Count<2)
+            if (selectedFamily.Adults.Count < 1)
+            {
+                Message += "\t\t -- NO Adults \n";
+            }
+            else if (selectedFamily.Adults.Count==1)
             {
                 Message += "\t\t --- Adults: " + selectedFamily.Adults.ElementAt(0).FirstName + " " + selectedFamily.Adults.ElementAt(0).LastName + "\n";
             }

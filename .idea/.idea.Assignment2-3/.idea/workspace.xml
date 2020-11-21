@@ -24,99 +24,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efaa9d78-8f8c-49e3-839a-f0d21656ec5d" name="Default Changelist" comment="final commit">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assignment2-3/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment4.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment4.db-shm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment4.db-wal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Data/UserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/DataAccess/Assignment4DBContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Migrations/20201114142818_InitialCreate.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Migrations/20201114142818_InitialCreate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Migrations/Assignment4DBContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Humanizer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Data.Sqlite.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Sqlite.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/SQLitePCLRaw.core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/SQLitePCLRaw.provider.dynamic_cdecl.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/System.ComponentModel.Annotations.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/System.Text.Encodings.Web.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/System.Text.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/alpine-x64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/linux-arm/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/linux-arm64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/linux-armel/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/linux-mips64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/linux-musl-x64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/linux-x64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/linux-x86/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/osx-x64/native/libe_sqlite3.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Assignment2-3WebApi.csproj.EntityFrameworkCore.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2-3WebApi/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment2-3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment2-3/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="efaa9d78-8f8c-49e3-839a-f0d21656ec5d" name="Default Changelist" comment="made it work with db - family not deleted when both adults null">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment2-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment2-3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3/bin/Debug/netcoreapp3.1/Assignment2-3.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3/bin/Debug/netcoreapp3.1/Assignment2-3.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3/bin/Debug/netcoreapp3.1/Assignment2-3.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3/bin/Debug/netcoreapp3.1/Assignment2-3.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.RazorCoreGenerate.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2-3/Pages/FamilyInfo.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3/Pages/FamilyInfo.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Assignment2-3.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3/obj/Debug/netcoreapp3.1/Razor/Pages/Error.cshtml.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment2-3WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment2-3WebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Data/AdultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Data/FamilyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Data/FamilyService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Data/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Data/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Data/InMemoryUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Data/InMemoryUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Persistance/FileContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Persistance/FileContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/adults.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/adults.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Assignment2-3WebApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Assignment2-3WebApi.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Assignment2-3WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Assignment2-3WebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Assignment2-3WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/Assignment2-3WebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/adults.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/adults.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/families.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/bin/Debug/netcoreapp3.1/families.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/families.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/families.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Assignment2-3WebApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Assignment2-3WebApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Assignment2-3WebApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Assignment2-3WebApi.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment4.db" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment4.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment4.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment4.db-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment4.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/Assignment4.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/Debug/netcoreapp3.1/Assignment2-3WebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2-3WebApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2-3WebApi/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assignment2-3/Models/ChildInterest.cs" />
         <option value="$PROJECT_DIR$/Assignment2-3/Models/Family.cs" />
         <option value="$PROJECT_DIR$/Assignment2-3/Models/Pet.cs" />
         <option value="$PROJECT_DIR$/Assignment2-3/Pages/AddAdult.razor" />
@@ -189,6 +103,7 @@
         <option value="$PROJECT_DIR$/Assignment2-3WebApi/Data/UserService.cs" />
         <option value="$PROJECT_DIR$/Assignment2-3WebApi/Data/AdultService.cs" />
         <option value="$PROJECT_DIR$/Assignment2-3WebApi/Data/FamilyService.cs" />
+        <option value="$PROJECT_DIR$/Assignment2-3/Pages/FamilyInfo.razor" />
       </list>
     </option>
   </component>
@@ -331,7 +246,8 @@
       <workItem from="1604843944857" duration="162000" />
       <workItem from="1604849070126" duration="521000" />
       <workItem from="1604995001325" duration="3274000" />
-      <workItem from="1605360110335" duration="16400000" />
+      <workItem from="1605360110335" duration="19272000" />
+      <workItem from="1605989526414" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="initial 2">
       <created>1603625503908</created>
@@ -382,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604410260938</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="made it work with db - family not deleted when both adults null">
+      <created>1605429122268</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605429122268</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +334,8 @@
     <MESSAGE value="Added webApi - all files" />
     <MESSAGE value="made user login work using api" />
     <MESSAGE value="final commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
+    <MESSAGE value="made it work with db - family not deleted when both adults null" />
+    <option name="LAST_COMMIT_MESSAGE" value="made it work with db - family not deleted when both adults null" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605364238215">
@@ -426,22 +350,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="716" y="227" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603625400800" />
-    <state width="1877" height="291" key="GridCell.Tab.0.bottom" timestamp="1605429011969">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1605990271408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605429011969" />
-    <state width="1877" height="291" key="GridCell.Tab.0.center" timestamp="1605429011969">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605990271408" />
+    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1605990271408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="291" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605429011969" />
-    <state width="1877" height="291" key="GridCell.Tab.0.left" timestamp="1605429011969">
+    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605990271408" />
+    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1605990271408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="291" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605429011969" />
-    <state width="1877" height="291" key="GridCell.Tab.0.right" timestamp="1605429011969">
+    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605990271408" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1605990271408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="291" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605429011969" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605990271408" />
     <state x="961" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1603995030414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -454,10 +378,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="863" y="168" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603620367578" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605429044626">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605429133737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605429044626" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605429133737" />
     <state x="673" y="205" width="963" height="718" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605366450299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
